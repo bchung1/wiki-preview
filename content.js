@@ -7,7 +7,7 @@ $('a').hoverIntent({
 	out: function(){
 
 	},
-	interval: 400
+	interval: 200
 })
 
 
@@ -24,7 +24,7 @@ function getHrefHtml(href, currLink){
 function getFirstParagraph(htmlText, currLink){
 	var  html = $.parseHTML(htmlText);
 	var  first_bolded_word = $(html).find('#mw-content-text p > b:first');
-	var first_para = $(first_bolded_word).parent().text();
+	var first_para = $(first_bolded_word).closest('p').text();
 	$(currLink).attr({
 		'data-balloon-length': 'xlarge',
 		'data-balloon': first_para,
