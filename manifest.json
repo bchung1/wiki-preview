@@ -1,0 +1,18 @@
+{
+	"manifest_version": 2, 
+	"name" : "linkPreview",
+	"version": "1.0",
+	"description": "Preview links on hover",
+	"background": { 
+		"scripts": ["js_plugins/jquery.min.js", "background.js"]
+	}, 
+	"content_scripts": [
+	{
+		"matches": ["https://en.wikipedia.org/wiki/*"], 
+		"js": ["js_plugins/jquery.min.js", "js_plugins/jquery.hoverIntent.js", 
+				"js_plugins/tether.min.js", "js_plugins/drop.min.js", "js_plugins/tooltip.min.js", "content.js"], 
+		"css": ["css_plugins/tooltip-theme-arrows.css", "css_plugins/balloon.min.css"]
+	}
+	]
+}
+
