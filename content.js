@@ -8,8 +8,7 @@ $('a').hoverIntent({
 
 	},
 	interval: 200
-})
-
+});
 
 function getHrefHtml(href, currLink){
 	$.ajax({ 
@@ -19,7 +18,6 @@ function getHrefHtml(href, currLink){
 		} 
 	});
 }
-
 
 function getFirstParagraph(htmlText, currLink){
 	var  html = $.parseHTML(htmlText);
@@ -32,3 +30,6 @@ function getFirstParagraph(htmlText, currLink){
 	});
 
 }
+
+
+
